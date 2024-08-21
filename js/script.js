@@ -9,7 +9,7 @@ $(document).ready(function(){
        
        $.ajax({
             type:"DELETE",
-            url:"http://backend-app-git.mathiyalagan.svc.cluster.local:8080/api/users/" + id,
+            url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users/" + id,
             success: function(data){
                 alertUsing("Delete Success.", true);
                 assignDataToTable();
@@ -49,7 +49,7 @@ $(document).ready(function(){
                 type:"PUT",
                 data: JSON.stringify(jsonVar),
                 contentType: "application/json",
-                url:"http://backend-app-git.mathiyalagan.svc.cluster.local:8080/api/users/" + id,
+                url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users/" + id,
                 success: function(data){
                     alertUsing("Update Success.", true);
                     $("#update").hide();
@@ -96,7 +96,7 @@ $(document).ready(function(){
 
         $.ajax({
             type:"POST",
-            url:"http://backend-app-git.mathiyalagan.svc.cluster.local:8080/api/users",
+            url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users",
             data: JSON.stringify(jsonVar),
             contentType: "application/json",
             success: function(data){
@@ -115,7 +115,7 @@ $(document).ready(function(){
         $.ajax({    
           type:"GET",
           contentType: "application/json",
-          url:"http://backend-app-git.mathiyalagan.svc.cluster.local:8080/api/users",
+          url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users",
           success: function(data) {
             var users = JSON.parse(JSON.stringify(data));
             for (var i in users) {
