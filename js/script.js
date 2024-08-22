@@ -22,7 +22,7 @@ function deleteRow(el) {
        
        $.ajax({
             type:"DELETE",
-            url:"http://localhost:8080/api/users/" + id,
+            url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users/" + id,
             success: function(data){
 				$("tbody").empty();
                 assignDataToTable()
@@ -41,7 +41,7 @@ function assignDataToTable() {
         $.ajax({    
           type:"GET",
           contentType: "application/json",
-          url:"http://localhost:8080/api/users",
+          url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users",
           success: function(data) {
             var users = JSON.parse(JSON.stringify(data));
 			var n = 1;
@@ -91,7 +91,7 @@ $(document).ready(function(){
                 type:"PUT",
                 data: JSON.stringify(jsonVar),
                 contentType: "application/json",
-                url:"http://localhost:8080/api/users/" + id,
+                url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users/" + id,
                 success: function(data){
 					alertUsing("Update Success.", true);
 					$("tbody").empty();
@@ -143,7 +143,7 @@ $(document).ready(function(){
                 type:"PUT",
                 data: JSON.stringify(jsonVar),
                 contentType: "application/json",
-                url:"http://localhost:8080/api/users/" + id,
+                url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users/" + id,
                 success: function(data){
                     alertUsing("Update Success.", true);
                     $("#update").hide();
@@ -187,7 +187,7 @@ $(document).ready(function(){
 
         $.ajax({
             type:"POST",
-            url:"http://localhost:8080/api/users",
+            url:"https://backend-app-git-mathiyalagan.dsopmi-training-1607940-f72ef11f3ab089a8c677044eb28292cd-0000.sjc03.containers.appdomain.cloud/api/users",
             data: JSON.stringify(jsonVar),
             contentType: "application/json",
             success: function(data){
